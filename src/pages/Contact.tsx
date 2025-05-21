@@ -141,7 +141,7 @@ const Contact = () => {
                 <div>
                   <h3 className="font-medium text-gray-800">Address</h3>
                   <p className="text-gray-600">
-                    123 Beauty Street, Cityville, State 12345
+                  Asha Pushp vihar 96 flat no Kaushambi<br/> Ghaziabad UP Nearby Radisson Blu hotel
                   </p>
                 </div>
               </div>
