@@ -1,7 +1,7 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { X } from "lucide-react";
+import { X, Instagram } from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 import GalleryItem from "@/components/GalleryItem";
 
