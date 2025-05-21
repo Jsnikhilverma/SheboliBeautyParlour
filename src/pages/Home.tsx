@@ -63,7 +63,7 @@ const Home = () => {
         subtitle="Discover our premium beauty services tailored just for you. Look and feel your absolute best."
         ctaText="Book Now"
         ctaLink="/booking"
-        bgImage="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?ixlib=rb-4.0.3"
+        bgImage="image/HeroBg1.jpg"
       />
 
       {/* About Section */}

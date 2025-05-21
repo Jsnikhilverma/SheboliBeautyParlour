@@ -163,7 +163,7 @@ const Contact = () => {
                 <div>
                   <h3 className="font-medium text-gray-800">Email</h3>
                   <p className="text-gray-600">
-                    info@serenitybeauty.com
+                    info@ Sheboli Beauty Salon.com
                   </p>
                 </div>
               </div>

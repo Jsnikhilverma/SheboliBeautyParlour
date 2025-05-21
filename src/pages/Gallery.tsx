@@ -213,7 +213,7 @@ const Gallery = () => {
             className="beauty-button inline-flex items-center text-gray-800"
           >
             <Instagram className="mr-2" size={18} />
-            @serenitybeauty
+            @ Sheboli Beauty Salon
           </a>
         </div>
       </section>

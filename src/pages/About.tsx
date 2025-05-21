@@ -39,7 +39,7 @@ const About = () => {
     <>
       <PageHeader 
         title="About Us" 
-        subtitle="Meet our team and discover the story behind Serenity Beauty Salon"
+        subtitle="Meet our team and discover the story behind Sheboli Beauty Salon"
         bgImage="https://images.unsplash.com/photo-1607779097040-26e80aa78e66?ixlib=rb-4.0.3"
       />
 
@@ -55,7 +55,7 @@ const About = () => {
           >
             <h2 className="section-title">Our Story</h2>
             <p className="mb-6 text-gray-600">
-              Serenity Beauty Salon was founded in 2010 with a simple mission: to provide exceptional beauty services in a tranquil environment where clients can relax, rejuvenate, and leave feeling confident and beautiful.
+            Sheboli Beauty Salon was founded in 2010 with a simple mission: to provide exceptional beauty services in a tranquil environment where clients can relax, rejuvenate, and leave feeling confident and beautiful.
             </p>
             <p className="mb-6 text-gray-600">
               What started as a small salon with three chairs has grown into a comprehensive beauty destination offering a wide range of services from hair styling to advanced skin treatments. Throughout our growth, we've maintained our commitment to personalized care and premium quality.

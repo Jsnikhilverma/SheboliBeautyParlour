@@ -73,7 +73,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start text-gray-600">
                 <MapPin size={18} className="mr-2 mt-1 flex-shrink-0" />
-                <span>123 Beauty Street, Salon City, SC 12345</span>
+                <span>Asha Pushp vihar 96 flat no Kaushambi Ghaziabad UP Nearby Radisson Blu hotel</span>
               </li>
               <li className="flex items-center text-gray-600">
                 <Phone size={18} className="mr-2 flex-shrink-0" />
@@ -81,7 +81,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center text-gray-600">
                 <Mail size={18} className="mr-2 flex-shrink-0" />
-                <span>info@serenitysalon.com</span>
+                <span>info@Sheboli Beauty Salon.com</span>
               </li>
             </ul>
           </div>

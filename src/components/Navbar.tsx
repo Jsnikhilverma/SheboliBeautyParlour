@@ -54,7 +54,7 @@ const Navbar = () => {
           <Link to="/" className="relative z-50">
             <span className="text-2xl font-serif font-medium">
               <span className={`${isScrolled ? "text-gray-800" : "text-white"} transition-colors duration-300`}>
-                Serenity<span className="bg-clip-text text-transparent beauty-gradient">Beauty</span>
+              Sheboli<span className="bg-clip-text text-transparent beauty-gradient">Beauty</span>
               </span>
             </span>
           </Link>

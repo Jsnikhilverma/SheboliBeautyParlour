@@ -137,7 +137,7 @@ const HeroSection = ({
               <div className="absolute -bottom-10 -right-10 w-40 h-40 rounded-full bg-beauty-cream opacity-60 blur-xl"></div>
               
               {/* Image container with glass effect */}
-              <div className="relative z-10 rounded-2xl overflow-hidden border border-white/20 backdrop-blur-sm shadow-xl">
+              {/* <div className="relative z-10 rounded-2xl overflow-hidden border border-white/20 backdrop-blur-sm shadow-xl">
                 <img 
                   src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?ixlib=rb-4.0.3" 
                   alt="Beauty treatment" 
@@ -154,7 +154,7 @@ const HeroSection = ({
                     <p className="text-white/90 text-sm">Experience our signature facial treatment, designed to revitalize your skin</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </motion.div>
         </div>
