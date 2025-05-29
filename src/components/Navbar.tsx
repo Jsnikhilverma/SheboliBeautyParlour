@@ -58,7 +58,11 @@ const Navbar = () => {
                 } transition-colors duration-300`}
               >
                 Sheboli
-                <span className="bg-clip-text text-transparent beauty-gradient ml-2">
+                <span
+                  className={`${
+                    isScrolled ? "text-gray-800" : "text-white"
+                  } transition-colors duration-300`}
+                >
                   Beauty
                 </span>
               </span>
