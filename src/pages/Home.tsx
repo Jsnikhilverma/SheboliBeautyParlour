@@ -31,6 +31,12 @@ const serviceData = [
     description:
       "Relax and unwind with our therapeutic massage techniques for ultimate relaxation.",
   },
+  {
+    icon: "https://img.icons8.com/cotton/64/spa.png",
+    title: "Home Service",
+    description:
+      "Pampering beauty and wellness services delivered to your doorstep.",
+  },
 ];
 
 const testimonialData = [
@@ -130,7 +136,7 @@ const Home = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {serviceData.map((service, index) => (
             <ServiceCard
               key={index}
