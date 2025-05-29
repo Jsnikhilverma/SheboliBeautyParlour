@@ -1,7 +1,14 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { toast } from "@/components/ui/use-toast";
-import { Phone, Mail, MapPin, Instagram, Facebook, Twitter } from "lucide-react";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Instagram,
+  Facebook,
+  Twitter,
+} from "lucide-react";
 import PageHeader from "@/components/PageHeader";
 
 const Contact = () => {
@@ -16,7 +23,9 @@ const Contact = () => {
   });
   const [submitting, setSubmitting] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setForm({
       ...form,
       [e.target.name]: e.target.value,
@@ -26,7 +35,7 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSubmitting(true);
-    
+
     // Simulate API call
     setTimeout(() => {
       setSubmitting(false);
@@ -49,8 +58,8 @@ const Contact = () => {
 
   return (
     <>
-      <PageHeader 
-        title="Contact Us" 
+      <PageHeader
+        title="Contact Us"
         subtitle="We'd love to hear from you! Get in touch with us for any inquiries or appointments."
         bgImage="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?ixlib=rb-4.0.3"
       />
@@ -59,7 +68,7 @@ const Contact = () => {
       <section className="section-container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
@@ -68,7 +77,10 @@ const Contact = () => {
             <h2 className="section-title">Send us a message</h2>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="name" className="block text-gray-700 text-sm font-medium mb-2">
+                <label
+                  htmlFor="name"
+                  className="block text-gray-700 text-sm font-medium mb-2"
+                >
                   Your Name
                 </label>
                 <input
@@ -83,7 +95,10 @@ const Contact = () => {
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-gray-700 text-sm font-medium mb-2">
+                <label
+                  htmlFor="email"
+                  className="block text-gray-700 text-sm font-medium mb-2"
+                >
                   Your Email
                 </label>
                 <input
@@ -98,7 +113,10 @@ const Contact = () => {
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-gray-700 text-sm font-medium mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-gray-700 text-sm font-medium mb-2"
+                >
                   Message
                 </label>
                 <textarea
@@ -133,7 +151,7 @@ const Contact = () => {
             <p className="text-gray-600 mb-8">
               Feel free to reach out to us through any of the channels below:
             </p>
-            
+
             <div className="space-y-6">
               {/* Address */}
               <div className="flex items-start space-x-4">
@@ -141,7 +159,8 @@ const Contact = () => {
                 <div>
                   <h3 className="font-medium text-gray-800">Address</h3>
                   <p className="text-gray-600">
-                  Asha Pushp vihar 96 flat no Kaushambi<br/> Ghaziabad UP Nearby Radisson Blu hotel
+                    Asha Pushp vihar 96 flat no Kaushambi
+                    <br /> Ghaziabad UP Nearby Radisson Blu hotel
                   </p>
                 </div>
               </div>
@@ -151,9 +170,7 @@ const Contact = () => {
                 <Phone className="text-beauty-pink h-6 w-6 flex-shrink-0" />
                 <div>
                   <h3 className="font-medium text-gray-800">Phone</h3>
-                  <p className="text-gray-600">
-                    (123) 456-7890
-                  </p>
+                  <p className="text-gray-600">(123) 456-7890</p>
                 </div>
               </div>
 
@@ -173,13 +190,28 @@ const Contact = () => {
             <div className="mt-12">
               <h3 className="font-medium text-gray-800 mb-4">Follow Us</h3>
               <div className="flex space-x-4">
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-beauty-pink transition-colors">
+                <a
+                  href="https://instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-beauty-pink transition-colors"
+                >
                   <Instagram className="h-6 w-6" />
                 </a>
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-beauty-pink transition-colors">
+                <a
+                  href="https://facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-beauty-pink transition-colors"
+                >
                   <Facebook className="h-6 w-6" />
                 </a>
-                <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-beauty-pink transition-colors">
+                <a
+                  href="https://twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-600 hover:text-beauty-pink transition-colors"
+                >
                   <Twitter className="h-6 w-6" />
                 </a>
               </div>
@@ -193,19 +225,20 @@ const Contact = () => {
         <div className="text-center mb-12">
           <h2 className="section-title mx-auto">Our Location</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Visit us at our conveniently located salon for a premium beauty experience.
+            Visit us at our conveniently located salon for a premium beauty
+            experience.
           </p>
         </div>
-        
+
         <div className="w-full h-[500px] rounded-lg overflow-hidden shadow-md">
-          <iframe 
+          <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.214192152984!2d-73.99033798458638!3d40.70382747932847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a27e2fa4399%3A0x9a0c694573614861!2sWall%20Street!5e0!3m2!1sen!2sus!4v1629975068989!5m2!1sen!2sus"
-            width="100%" 
-            height="500" 
-            style={{border:0}} 
-            allowFullScreen={true} 
+            width="100%"
+            height="500"
+            style={{ border: 0 }}
+            allowFullScreen={true}
             loading="lazy"
-            title="Serenity Beauty Salon Location"
+            title="Sheboli beauty salon Location"
           ></iframe>
         </div>
       </section>

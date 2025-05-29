@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import PageHeader from "@/components/PageHeader";
@@ -11,6 +10,8 @@ const serviceCategories = [
   { id: "nails", name: "Nails" },
   { id: "spa", name: "Spa" },
   { id: "bridal", name: "Bridal" },
+  { id: "Koreanfacial", name: "Korean Glass Facial" },
+  { id: "hydrafacial", name: "Hydra Facial" },
 ];
 
 const servicesData = [
@@ -25,42 +26,48 @@ const servicesData = [
     id: 2,
     icon: "https://img.icons8.com/cotton/64/mascara.png",
     title: "Hair Coloring",
-    description: "From subtle highlights to bold transformations using premium hair dyes.",
+    description:
+      "From subtle highlights to bold transformations using premium hair dyes.",
     category: "hair",
   },
   {
     id: 3,
     icon: "https://img.icons8.com/cotton/64/spa-care.png",
     title: "Hair Treatments",
-    description: "Restorative treatments for damaged hair, including keratin and deep conditioning.",
+    description:
+      "Restorative treatments for damaged hair, including keratin and deep conditioning.",
     category: "hair",
   },
   {
     id: 4,
     icon: "https://img.icons8.com/cotton/64/facial-mask.png",
     title: "Classic Facial",
-    description: "Cleansing, exfoliating, and hydrating facial to revitalize your skin.",
+    description:
+      "Cleansing, exfoliating, and hydrating facial to revitalize your skin.",
     category: "skin",
   },
   {
     id: 5,
     icon: "https://img.icons8.com/cotton/64/spa-care-2.png",
     title: "Advanced Facials",
-    description: "Specialized treatments targeting specific skin concerns like aging or acne.",
+    description:
+      "Specialized treatments targeting specific skin concerns like aging or acne.",
     category: "skin",
   },
   {
     id: 6,
     icon: "https://img.icons8.com/cotton/64/micro-needle.png",
     title: "Skin Rejuvenation",
-    description: "Non-invasive treatments to improve skin texture and appearance.",
+    description:
+      "Non-invasive treatments to improve skin texture and appearance.",
     category: "skin",
   },
   {
     id: 7,
     icon: "https://img.icons8.com/cotton/64/nail-polish.png",
     title: "Manicure",
-    description: "Nail shaping, cuticle care, and polish application for beautiful hands.",
+    description:
+      "Nail shaping, cuticle care, and polish application for beautiful hands.",
     category: "nails",
   },
   {
@@ -74,21 +81,24 @@ const servicesData = [
     id: 9,
     icon: "https://img.icons8.com/cotton/64/paint-palette.png",
     title: "Nail Art",
-    description: "Creative designs and embellishments to make your nails stand out.",
+    description:
+      "Creative designs and embellishments to make your nails stand out.",
     category: "nails",
   },
   {
     id: 10,
     icon: "https://img.icons8.com/cotton/64/spa.png",
     title: "Full Body Massage",
-    description: "Relaxing massage techniques to release tension and promote relaxation.",
+    description:
+      "Relaxing massage techniques to release tension and promote relaxation.",
     category: "spa",
   },
   {
     id: 11,
     icon: "https://img.icons8.com/cotton/64/spa-flower.png",
     title: "Body Scrubs",
-    description: "Exfoliating treatments that leave your skin smooth and glowing.",
+    description:
+      "Exfoliating treatments that leave your skin smooth and glowing.",
     category: "spa",
   },
   {
@@ -102,7 +112,8 @@ const servicesData = [
     id: 13,
     icon: "https://img.icons8.com/cotton/64/wedding-bouquet-2.png",
     title: "Bridal Hair & Makeup",
-    description: "Customized looks for your special day, including trials and day-of services.",
+    description:
+      "Customized looks for your special day, including trials and day-of services.",
     category: "bridal",
   },
   {
@@ -118,6 +129,77 @@ const servicesData = [
     title: "Pre-Wedding Packages",
     description: "Multi-session treatments to prepare for your big day.",
     category: "bridal",
+  },
+  {
+    id: 16,
+    icon: "https://img.icons8.com/cotton/64/meditation.png",
+    title: "Aromatherapy",
+    description: "Essential oil treatments to balance mind, body, and spirit.",
+    category: "spa",
+  },
+  {
+    id: 17,
+    icon: "https://img.icons8.com/cotton/64/wedding-bouquet-2.png",
+    title: "Korean Glass Glow Express",
+    description:
+      "Quick hydration + glass skin serum infusion for a visible glow.",
+    category: "Koreanfacial",
+  },
+  {
+    id: 18,
+    icon: "https://img.icons8.com/cotton/64/wedding-cake.png",
+    title: "Deep Hydration Korean Facial",
+    description:
+      "Includes double cleansing, exfoliation, toner essence layering, and face massage.",
+    category: "Koreanfacial",
+  },
+  {
+    id: 19,
+    icon: "https://img.icons8.com/cotton/64/wedding-rings.png",
+    title: " Herbal Korean Glass Facial ",
+    description:
+      "Blends Korean techniques with our natural ingredients like Amla & Aloe.",
+    category: "Koreanfacial",
+  },
+  {
+    id: 20,
+    icon: "https://img.icons8.com/cotton/64/wedding-rings.png",
+    title: "Premium Korean Glass Therapy",
+    description:
+      "Multi-step treatment with essence layering, collagen boost, ampoule massage & jelly mask.",
+    category: "Koreanfacial",
+  },
+
+  {
+    id: 21,
+    icon: "https://img.icons8.com/cotton/64/wedding-bouquet-2.png",
+    title: "HydraGlow Basic Facial",
+    description: "A quick glow-up session for instant radiance and clean skin.",
+    category: "hydrafacial",
+  },
+  {
+    id: 22,
+    icon: "https://img.icons8.com/cotton/64/wedding-cake.png",
+    title: "HydraGlow Advanced Facial",
+    description:
+      "Targets clogged pores, dullness, and mild acne with deeper exfoliation.",
+    category: "hydrafacial",
+  },
+  {
+    id: 23,
+    icon: "https://img.icons8.com/cotton/64/wedding-rings.png",
+    title: "Premium Anti-Aging HydraFacial ",
+    description:
+      "Combines hydration, peptides, and LED therapy to reduce fine lines.",
+    category: "hydrafacial",
+  },
+  {
+    id: 24,
+    icon: "https://img.icons8.com/cotton/64/wedding-rings.png",
+    title: "Organic Herbal HydraFacial",
+    description:
+      "Infused with natural herbs like Amla and Aloe Vera for sensitive skin.",
+    category: "hydrafacial",
   },
 ];
 
@@ -142,8 +224,8 @@ const Services = () => {
 
   return (
     <>
-      <PageHeader 
-        title="Our Services" 
+      <PageHeader
+        title="Our Services"
         subtitle="Discover our comprehensive range of beauty and wellness services"
         bgImage="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3"
       />
@@ -197,7 +279,12 @@ const Services = () => {
 
           {/* Process Steps */}
           <div className="space-y-16">
-            {["Consultation", "Service Selection", "Expert Treatment", "Follow Up"].map((step, index) => (
+            {[
+              "Consultation",
+              "Service Selection",
+              "Expert Treatment",
+              "Follow Up",
+            ].map((step, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -211,13 +298,13 @@ const Services = () => {
                 <div className="md:w-1/2 p-6">
                   <h3 className="text-2xl font-serif mb-4">{step}</h3>
                   <p className="text-gray-600">
-                    {step === "Consultation" && 
+                    {step === "Consultation" &&
                       "We begin with a thorough consultation to understand your needs, preferences, and goals for your visit."}
-                    {step === "Service Selection" && 
+                    {step === "Service Selection" &&
                       "Our experts help you choose the perfect services and products tailored to your specific requirements."}
-                    {step === "Expert Treatment" && 
+                    {step === "Expert Treatment" &&
                       "Relax and enjoy as our skilled professionals deliver exceptional service using premium products and techniques."}
-                    {step === "Follow Up" && 
+                    {step === "Follow Up" &&
                       "We provide aftercare advice and product recommendations to maintain your results at home."}
                   </p>
                 </div>
@@ -225,7 +312,7 @@ const Services = () => {
                   <span className="font-serif text-lg">{index + 1}</span>
                 </div>
                 <div className="md:w-1/2 p-6">
-                  <img 
+                  <img
                     src={`https://source.unsplash.com/random/600x400?beauty,salon,${step}&sig=${index}`}
                     alt={step}
                     className="rounded-lg shadow-md"
@@ -248,7 +335,7 @@ const Services = () => {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {[1, 2, 3, 4].map((item) => (
-            <motion.div 
+            <motion.div
               key={item}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -257,14 +344,16 @@ const Services = () => {
               className="flex flex-col items-center p-6 text-center"
             >
               <div className="w-24 h-24 mb-4 rounded-full flex items-center justify-center bg-gray-100">
-                <img 
+                <img
                   src={`https://source.unsplash.com/random/100x100?cosmetics,product&sig=${item}`}
-                  alt="Product" 
+                  alt="Product"
                   className="w-16 h-16 rounded-full object-cover"
                 />
               </div>
               <h3 className="text-lg font-serif">Premium Brand {item}</h3>
-              <p className="text-sm text-gray-500">High-quality, sustainable products</p>
+              <p className="text-sm text-gray-500">
+                High-quality, sustainable products
+              </p>
             </motion.div>
           ))}
         </div>
